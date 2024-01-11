@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+html { 
+    background: lightblue; 
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.search {
+    position: relative;
+    left: 80%;
+    width: 15%;
+    min-height: 5rem;
+    text-align: center;
+}
+
+.search input {
+    width: 100%;
+    background-color: aliceblue;
+    height: 20px;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+.pokemon-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.pokemon-card {
+    width: 30%;
+    min-height: 5rem;
+    margin: 5px;
+    background-color: lightgreen;
+    border: solid 1px rgb(10, 196, 10);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.pokemon-card:hover {
+    border: solid 1px darkgreen;
+}
+
+.pokemon-card:active {
+    background-color: rgb(93, 235, 93);
+}
+
+.infos {
+    width: 80%;
+    border-top: solid 2px green;
+    margin-bottom: 10px;
+}
+
+.infos p {
+    margin: 5px;
+    color:darkslategrey;
+    margin-left: 10px;
+}
