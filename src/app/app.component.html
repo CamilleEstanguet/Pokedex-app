@@ -1,22 +1,34 @@
-<h1>Le Pokédex de la mort</h1>
+<header>
+  <h1>Le Pokédex de la mort</h1>
+</header>
 
-<div class="search">
-  <input #search (keyup.enter)="searchPokemon(search.value)" type="text" name="selectPokemon" id="selectPokemon" placeholder="Rechercher un pokémon" />
+<div class="content">
+  <div class="search">
+    <input
+      #search
+      (keyup.enter)="searchPokemon(search.value)"
+      type="text"
+      name="selectPokemon"
+      id="selectPokemon"
+      placeholder="Rechercher un pokémon"
+    />
 
-  <p *ngIf="!justLoaded">{{ pokemonSelected != undefined ? pokemonSelected.name : "Aucun pokémon trouvé" }}</p>
-</div>
+    <p *ngIf="!justLoaded">{{ pokemonSelected != undefined ? pokemonSelected.name : "Aucun pokémon trouvé" }}</p>
+  </div>
 
-<div class="pokemon-list">
-  <ng-container *ngFor="let pokemon of pokemonList">
-    <div class="pokemon-card" (click)="selectPokemon(pokemon.id.toString())">
-      <h5>{{ pokemon.name }}</h5>
-      <div class="infos">
-        <p>Type: {{pokemon.types}}</p>
-        <p>Points de vie: {{pokemon.hp}}</p>
+  <div class="pokemon-list">
+    <ng-container *ngFor="let pokemon of pokemonList">
+      <div class="pokemon-card" (click)="selectPokemon(pokemon.id.toString())">
+        <h5>{{ pokemon.name }}</h5>
+        <div class="infos">
+          <p>
+            <small>Type: {{ pokemon.types }}</small>
+            <small>Points de vie: {{ pokemon.hp }}</small>
+          </p>
+        </div>
       </div>
-    </div>
-  </ng-container>
+    </ng-container>
+  </div>
 </div>
-
 
 <router-outlet></router-outlet>

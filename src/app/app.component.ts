@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core"
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from "@angular/common"
 import { RouterOutlet } from "@angular/router"
 import { POKEMONS } from "../pokemons/mock-pokemon"
