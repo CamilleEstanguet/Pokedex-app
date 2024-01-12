@@ -1,0 +1,11 @@
+@import '../utilities.scss';
+
+.pokemon-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  .pokemon-card {
+    @extend .card;
+  }
+}
