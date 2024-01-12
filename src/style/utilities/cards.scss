@@ -2,9 +2,9 @@
   width: 30%;
   height: 12rem;
   margin: 5px;
-  background-color: whitesmoke;
-  border: solid 3px #e0e1e1;
-  box-shadow: 3px 2px 1px lightgray;
+  background-color: $bg-white;
+  border: solid $border-standard $gray;
+  box-shadow: $shadow-standard $dark-gray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,23 +12,23 @@
 
   .infos {
     width: 80%;
-    border-top: solid 2px green;
+    border-top: solid 2px $green;
     margin-bottom: 10px;
 
     p {
       display: flex;
       flex-direction: column;
       margin: 5px;
-      color: darkslategrey;
+      color: $text-gray;
       margin-left: 10px;
     }
   }
 }
 
 .card:hover {
-  border: solid 3px darkgreen;
+  border: solid $border-standard $dark-green;
 }
 
 .card:active {
-  background-color: lightgray;
+  background-color: $text-gray
 }
